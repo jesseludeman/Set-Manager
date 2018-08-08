@@ -8,7 +8,7 @@
         
     foreach ($DirectReport in $ManagerData)
     {
-    # Copy the Direct Reports across to the new user
-    Get-ADUser -Identity $DirectReport | Set-ADUser -Manager $NewManager
+        # Copy the Direct Reports across to the new user
+        Get-ADUser -Identity $DirectReport | Set-ADUser -Manager $NewManager
     }
 }
