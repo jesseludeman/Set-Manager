@@ -1,6 +1,6 @@
 ﻿function Set-Manager()
 {
-    Write-Host '***This will copy the Direct Reports from a terminated Manager to a new Manager***'
+    Write-Output '***This will copy the Direct Reports from a terminated Manager to a new Manager***'
 
     $OldManager = Read-Host 'Enter a manager to copy from'
     $ManagerData = Get-ADUser -Identity $OldManager -Properties DirectReports | Select-Object -ExpandProperty DirectReports
